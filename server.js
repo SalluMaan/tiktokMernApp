@@ -12,8 +12,8 @@ const Video = require("./dbModel");
 // middleware
 app.use(express.json());
 app.use((req, res, next) => {
-  res.setHeaders("Access-Control-Allow-Origin", "*");
-  res.setHeaders("Access-Control-Allow-Headers", "*");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
   next();
 });
 // ---- Database Config
