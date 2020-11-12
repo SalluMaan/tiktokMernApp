@@ -54,7 +54,7 @@ app.get("/allposts", (req, res) => {
   });
 });
 
-const port = 9000;
+const port = process.env.PORT || 9000;
 app.listen(port, () => {
   console.log("A Node JS API is listening on PORT:", port);
 });
