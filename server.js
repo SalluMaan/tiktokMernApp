@@ -11,11 +11,7 @@ const Video = require("./dbModel");
 
 // middleware
 app.use(express.json());
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  next();
-});
+
 // ---- Database Config
 const UrlMongoDB =
   "mongodb+srv://admin:Salman123@cluster0.dybdg.mongodb.net/<tiktokClone>?retryWrites=true&w=majority";
@@ -54,7 +50,7 @@ app.get("/allposts", (req, res) => {
   });
 });
 
-const port = process.env.PORT || 9000;
+let port = process.env.PORT || 9000;
 app.listen(port, () => {
   console.log("A Node JS API is listening on PORT:", port);
 });
